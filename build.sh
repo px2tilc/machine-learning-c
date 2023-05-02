@@ -1,3 +1,5 @@
 #!/bin/sh
 
-clang -Wall -Wextra -o main main.c
+set -xe
+
+clang -Wall -Wextra -o nl nl.c -lm
