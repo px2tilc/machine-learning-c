@@ -56,13 +56,13 @@ typedef struct {
 #define NN_OUTPUT(nn) (nn).as[(nn).count] 
 
 
-NN nn_alloc(size_t *arch, size_t arch_count);
-void nn_rand(NN nn, float low, float high);
-void nn_forward(NN nn);
+NN    nn_alloc(size_t *arch, size_t arch_count);
+void  nn_rand(NN nn, float low, float high);
+void  nn_forward(NN nn);
 float nn_cost(NN nn, Mat ti, Mat to);
-void nn_finite_diff(NN nn, NN ng, float eps, Mat ti, Mat to);
-void nn_learn(NN nn, NN ng, float rate);
-void nn_print(NN nn, const char *name);
+void  nn_finite_diff(NN nn, NN ng, float eps, Mat ti, Mat to);
+void  nn_learn(NN nn, NN ng, float rate);
+void  nn_print(NN nn, const char *name);
 
 #define NN_PRINT(nn) nn_print(nn, #nn)
 

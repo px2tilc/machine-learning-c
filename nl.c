@@ -56,7 +56,7 @@ int main()
   
   // This array 'arch' describes the architecture of the neural network
   // {input/s, ...layer neuron/s..., output/s}
-  size_t arch[] = {2, 10, 1};
+  size_t arch[] = {2, 2, 1};
   NN nn = nn_alloc(arch, ARRAY_LEN(arch));
   NN gn = nn_alloc(arch, ARRAY_LEN(arch));
   nn_rand(nn, 0, 1);
