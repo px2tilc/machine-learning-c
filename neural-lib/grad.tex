@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+
+\begin{document}
+\section{Gradient Descent}
+
+
+\begin{align}
+  % Po formuli odvoda vemo:
+  C' = \lim_{\epsilon \to 0}\frac{C(w_i + \epsilon) - C(w_i)}{\epsilon}
+\end{align}
+
+\subsection{``Twice''}
+\begin{align}
+    C(w) &= \frac{1}{n}{\sum_{i=1}^{n}(x_iw - y_i)^2} \\
+    % Poiscemo odvod C(w)
+    C'(w) &= \frac{1}{n}{\sum_{i=1}^{n}(x_iw - y_i)^2} \\
+          &= \left(\frac{1}{n}{\sum_{i=1}^{n}(x_iw - y_i)^2}\right)'= \\
+          &= \frac{1}{n}\left(\sum_{i=1}^{n}(x_iw - y_i)^2\right)'  = \\
+          &= \frac{1}{n}\sum_{i=1}^{n}\left((x_iw - y_i)^2\right)'  = \\
+          % y_i   - is a constant that is going to be equal to 0 => we can remove it
+          % x_i*w - w is a constant (1) so we can remove it and we are left with x_i
+          &= \frac{1}{n}\sum_{i=1}^{n}2(x_iw - y_i)x_i  = \\
+          &= \frac{1}{n}\sum_{i=1}^{n}2(x_iw - y_i)x_i  = \\
+\end{align}
+\begin{align}
+  C(w)  &= \frac{1}{n}{\sum_{i=1}^{n}(x_iw - y_i)^2} \\
+  C'(w) &= \frac{1}{n}\sum_{i=1}^{n}2(x_iw - y_i)x_i  \\
+\end{align}
+
+\end{document}
